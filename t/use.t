@@ -19,3 +19,5 @@ eval-lives-ok q{
     use Foo::Bar;
     use Foo::Baz;
 };
+
+done-testing;
