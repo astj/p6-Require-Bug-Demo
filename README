@@ -1,0 +1,35 @@
+$ perl6 -v
+This is Rakudo version 2017.02-188-g2a2e460b1 built on MoarVM version 2017.02-18-g5f9d6985
+implementing Perl 6.c.
+$ prove -e perl6 -vr t/
+t/require.t ..
+ok 1 -
+ok 2 -
+not ok 3 -
+
+# Failed test at t/require.t line 13
+# Error: Lexical 'Foo' already declared
+not ok 4 -
+
+# Failed test at t/require.t line 18
+# Error: Lexical 'Foo' already declared
+1..4
+# Looks like you failed 2 tests of 4
+Dubious, test returned 2 (wstat 512, 0x200)
+Failed 2/4 subtests
+t/use.t ......
+ok 1 -
+ok 2 -
+ok 3 -
+ok 4 -
+1..4
+ok
+
+Test Summary Report
+-------------------
+t/require.t (Wstat: 512 Tests: 4 Failed: 2)
+  Failed tests:  3-4
+  Non-zero exit status: 2
+Files=2, Tests=8,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.51 cusr  0.10 csys =  0.63 CPU)
+Result: FAIL
+
